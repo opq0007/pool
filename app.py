@@ -92,7 +92,7 @@ gost_cmd = [
 
 # 如果设置了额外的监听地址，添加到命令中
 if GOST_EXTRA_LISTEN:
-    print(f"Extra gost listen: {GOST_EXTRA_LISTEN}", flush=True)
+    print(f"Extra gost listen……", flush=True)
     gost_cmd.extend(["-L", GOST_EXTRA_LISTEN])
 
 gost_process = subprocess.Popen(gost_cmd)
