@@ -26,6 +26,7 @@ print("===== Node Starting =====", flush=True)
 FRP_SERVER_ADDR = os.environ.get("FRP_SERVER_ADDR","")
 FRP_SERVER_PORT = os.environ.get("FRP_SERVER_PORT", "80")
 FRP_TOKEN = os.environ.get("FRP_TOKEN","")
+FRP_GROUP_EXTRA = os.environ.get("FRP_GROUP_EXTRA","")
 
 PROXY_PORT = int(os.environ.get("PROXY_PORT","1080"))
 REMOTE_PORT = int(os.environ.get("REMOTE_PORT","6000"))  # 远程端口，默认 6000
@@ -68,7 +69,7 @@ localPort = {PROXY_PORT}
 
 remotePort = {REMOTE_PORT}
 
-loadBalancer.group = "proxy_pool"
+loadBalancer.group = "proxy_pool{FRP_GROUP_EXTRA}"
 loadBalancer.groupKey = "poolkey"
 
 """
