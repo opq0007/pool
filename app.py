@@ -74,8 +74,8 @@ loadBalancer.groupKey = "poolkey"
 
 """
 
-with open("/app/frpc.toml","w") as f:
-    f.write(config)
+# with open("/app/frpc.toml","w") as f:
+#     f.write(config)
 
 print("===== frpc.toml =====", flush=True)
 # print(config, flush=True)
