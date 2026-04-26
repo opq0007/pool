@@ -116,17 +116,17 @@ print("Starting frpc...", flush=True)
 # 检查进程
 ####################################
 
-def monitor():
-    while True:
-        if gost_process.poll() is not None:
-            print("gost stopped!", flush=True)
+# def monitor():
+#     while True:
+#         if gost_process.poll() is not None:
+#             print("gost stopped!", flush=True)
 
-        if frpc_process.poll() is not None:
-            print("frpc stopped!", flush=True)
+#         if frpc_process.poll() is not None:
+#             print("frpc stopped!", flush=True)
 
-        time.sleep(10)
+#         time.sleep(10)
 
-threading.Thread(target=monitor, daemon=True).start()
+# threading.Thread(target=monitor, daemon=True).start()
 
 ####################################
 # HF health server
