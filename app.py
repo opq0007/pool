@@ -96,7 +96,7 @@ if GOST_EXTRA_LISTEN:
     print(f"Extra gost listen……", flush=True)
     gost_cmd.extend(["-L", GOST_EXTRA_LISTEN])
 
-gost_process = subprocess.Popen(gost_cmd)
+# gost_process = subprocess.Popen(gost_cmd)
 
 ####################################
 # 启动 frpc
@@ -104,13 +104,13 @@ gost_process = subprocess.Popen(gost_cmd)
 
 print("Starting frpc...", flush=True)
 
-frpc_process = subprocess.Popen(
-[
-"/usr/local/bin/frpc",
-"-c",
-"/app/frpc.toml"
-]
-)
+# frpc_process = subprocess.Popen(
+# [
+# "/usr/local/bin/frpc",
+# "-c",
+# "/app/frpc.toml"
+# ]
+# )
 
 ####################################
 # 检查进程
